@@ -1,0 +1,301 @@
+/* File: style.css
+   Purpose: External Stylesheet for Mobile Engineer Blog (Unified Premium Look)
+   Note: This CSS is linked to both index.html and post.html
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+/* -----------------------------------
+   Global Variables and Reset
+----------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1F618D; /* Professional Blue */
+    --accent-color: #ff9800; /* Orange for accents/buttons */
+    --text-color: #212529;
+    --light-bg: #F0F4F7; /* Soft Light Gray */
+    --border-color: #ddd;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+/* -----------------------------------
+   Typography & Links (BOLD Emphasis)
+----------------------------------- */
+h1, h2, h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    font-weight: 800; /* Extra BOLD */
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2em; /* Main Post Title H1 size */
+}
+
+h2 {
+    font-size: 1.6em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+p, ul, ol {
+    margin-bottom: 1.2em;
+    text-align: justify;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #154c73;
+}
+
+/* -----------------------------------
+   Layout Container
+----------------------------------- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* -----------------------------------
+   Header & Navigation (SITE NAME/LOGO STYLES)
+----------------------------------- */
+.main-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* New style for the site title (Replaces H1 styling here) */
+.site-title {
+    color: #fff;
+    font-size: 2em; /* Same size as previous H1 */
+    font-weight: 800; /* Extra bold */
+    display: block; /* Ensure it behaves like a block element */
+    line-height: 1.2;
+}
+
+.main-header a {
+    color: #fff;
+    /* Other link properties remain */
+}
+
+.main-header p {
+    font-size: 1.1em;
+    margin: 5px 0 0;
+    opacity: 0.9;
+}
+
+/* -----------------------------------
+   Hero Section (Homepage Only)
+----------------------------------- */
+.hero-section {
+    background-color: var(--light-bg);
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.hero-section h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* -----------------------------------
+   Post/Article Cards (Homepage)
+----------------------------------- */
+.post-list {
+    display: grid;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.post-card {
+    border: 1px solid var(--border-color);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.post-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.post-card h2 a {
+    color: var(--text-color);
+    font-size: 1.5em;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.post-card p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #e68900;
+}
+
+/* -----------------------------------
+   Single Post Specific Elements
+----------------------------------- */
+.post-content {
+    padding: 20px 0;
+}
+
+/* Table of Contents (TOC) */
+.toc-box {
+    margin: 25px 0;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+.toc-box h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.toc-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc-box li {
+    padding: 5px 0;
+    border-bottom: 1px dotted rgba(0,0,0,0.1);
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* SEO Sections (FAQ/Internal Links) */
+.faq-section, .internal-links {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+
+.faq-section h2, .internal-links h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.faq-item h3 {
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+}
+
+.internal-links ul {
+    list-style: none;
+}
+
+.internal-links li {
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--border-color);
+}
+
+/* -----------------------------------
+   Footer
+----------------------------------- */
+.main-footer {
+    background-color: var(--text-color);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+.main-footer a {
+    color: var(--accent-color);
+}
+
+/* -----------------------------------
+   Media Queries
+----------------------------------- */
+@media (min-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+    /* Increase size of site title on desktop */
+    .site-title {
+        font-size: 3em;
+    }
+    h1 {
+        font-size: 3.5em; /* Post H1 size for desktop */
+    }
+    .hero-section h2 {
+        font-size: 2.5em;
+    }
+}
